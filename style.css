@@ -45,6 +45,7 @@ p{
     display: flex;
     padding: 10%;
     box-sizing: border-box;
+    background: linear-gradient(to left, white, #FFB200) ;
 }
 
 #home #intro #content{
@@ -70,32 +71,57 @@ p{
 }
 
 #home #intro #content #hire-me{
+    width: 50%;
     width: fit-content;
     font-size: 20px;
     padding: 10px;
-    border: 2px solid white;
+    border: 0px solid white;
     border-radius: 20px;
-    background: linear-gradient(to top right, #008DDA, rgb(255, 255, 255));
-    box-shadow: 8px 4px 10px 7px #D4F6FF;
+    background: linear-gradient(to top right, navy, rgb(255, 255, 255));
+    box-shadow: 0px 0px 10px 7px white;
 }
 
 #home #intro #content #hire-me:hover{
     background: white;
-    border: 2px solid #008DDA;
-    box-shadow: 8px 4px 10px 7px #4CC9FE;
+
+    box-shadow: 0px 0px 10px 7px navy;
     cursor: pointer;
 }
 
 #home #intro #content #hire-me a{
     text-decoration: none;
     color: white;
+    display: block;
 }
 
-#home #intro #content #hire-me a:hover{
+#home #intro #content #hire-me:hover a{
     text-decoration: none;
-    color: #008DDA;
+    color: navy;
 }
 
+#home #intro #buttons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home #intro #buttons #contact-logos{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home #intro #buttons #contact-logos img{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+#home #intro #buttons #contact-logos img:hover{
+    cursor: pointer;
+}
 
 #home #photo{
     width: 50%;
