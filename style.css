@@ -11,6 +11,10 @@ p{
     font-family: "Comic Relief";
 }
 
+html{
+    scroll-snap-type: y mandatory;
+}
+
 /* *****************************************************************Navbar Starts****************************************** */
 #navbar{
     position: fixed;
@@ -36,6 +40,7 @@ p{
 
 /* *****************************************************************Home Starts******************************************** */
 #home{
+    scroll-snap-align: center;
     display: flex;
     height: 100vh;
 }
@@ -136,6 +141,7 @@ p{
 
 /* *****************************************************************Other Sections Starts****************************************** */
 .other-sections{
+    scroll-snap-align: center;
     display: flex;
     height: 100vh;
     margin-bottom: 0;
@@ -167,28 +173,40 @@ p{
 .other-sections #content{
     width: 80%;
     height: 100%;
-    padding: 20px;
+    /* padding: 10px; */
     overflow-y: auto;
     background-color: #e2e2e2;
+    scroll-snap-type: y mandatory;
 }
 
 .title{
-    margin: 20px;
-    font-size: 80px;
+    margin-top: 10px;
+    font-size: 70px;
     font-weight: bold ;
     text-transform: uppercase;
     text-align: center;
     border: 1px solid black;
     width: 80%;
+    height: 10vh;
 }
 
-/* ****************************************************About**************************************************************** */
+/* ****************************************************About Starts**************************************************************** */
 #about-me{
+    scroll-snap-align: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+}
+
+#about-me-info{
+    padding: 20px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #about-me-info #stats-box{
@@ -200,7 +218,7 @@ p{
     display: flex;
     flex-wrap: wrap;
     height: 50vh;
-    width: 60%;
+    width: 50%;
 }
 
 #about-me-info .box{
@@ -236,9 +254,94 @@ p{
     border-left: 2px solid #FFB200;
 }
 
-#what-i-do{
+#outer-box{
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: start;
 }
+
+#outer-box h2
+{
+    margin-top: 0;
+    padding-left: 40px;
+    height: 10%;
+}
+
+#inner-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+}
+
+.row-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-box .row-box-pic{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-box .row-box-pic img{
+    width: 80px;
+    height: auto;
+}
+
+.row-box .row-box-content{
+    width: 70%;
+}
+
+/* ****************************************************About Ends**************************************************************** */
+
+
+/* ****************************************************Education Starts**************************************************************** */
+
+#education{
+    scroll-snap-align: center;
+
+    height: 100vh;
+
+}
+/* ****************************************************Education Ends**************************************************************** */
+
+/* ****************************************************Skills Starts**************************************************************** */
+
+#skills{
+    scroll-snap-align: center;
+
+    height: 100vh;
+}
+/* ****************************************************Skills Ends**************************************************************** */
+
+/* ****************************************************Projects Starts**************************************************************** */
+
+#projects{
+    scroll-snap-align: center;
+
+    height: 100vh;
+}
+
+/* ****************************************************Projects Ends**************************************************************** */
+
+/* ****************************************************Contact Starts**************************************************************** */
+
+#contact{
+    scroll-snap-align: center;
+
+    height: 100vh;
+}
+
+/* ****************************************************Contact Ends**************************************************************** */
+
+/* *****************************************************************Other Sections Starts****************************************** */
