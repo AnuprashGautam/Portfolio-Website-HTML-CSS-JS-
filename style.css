@@ -1,22 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Monoton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto";
+* {
+    padding: 0px;
+    margin: 0px;
 }
 
-p{
+body {
+    width: 100%;
+    height: 100dvh;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+p {
     font-family: "Comic Relief";
 }
 
-html{
-    scroll-snap-type: y mandatory;
+html {
+    /* scroll-snap-type: y mandatory; */
 }
 
-/* *****************************************************************Navbar Starts****************************************** */
-#navbar{
+/* *********************************************************************************************************** */
+/* ***************************************************Sidebar Starts******************************************* */
+/* *********************************************************************************************************** */
+.sidebar {
     position: fixed;
     top: 25vh;
     left: 95%;
@@ -31,177 +38,168 @@ html{
     padding: 0 10px;
 }
 
-#navbar .icon:hover{
+.sidebar__icon:hover {
     color: white;
     cursor: pointer;
 }
-/* *****************************************************************Navbar Starts****************************************** */
+
+/* *********************************************************************************************************** */
+/* ***************************************************Sidebar Ends******************************************* */
+/* *********************************************************************************************************** */
 
 
-/* *****************************************************************Home Starts******************************************** */
-#home{
-    scroll-snap-align: center;
+/* *********************************************************************************************************** */
+/* *****************************************************Home Starts******************************************* */
+/* *********************************************************************************************************** */
+.home {
     display: flex;
-    height: 100vh;
 }
 
-#home #intro{
+.home__left {
     width: 50%;
     display: flex;
-    padding: 10%;
-    box-sizing: border-box;
-    background: linear-gradient(to left, white, #FFB200) ;
-}
-
-#home #intro #content{
+    align-items: center;
     justify-content: center;
-    align-items: center;
+    background-image: linear-gradient(to right, #fddb92 0%, #d1fdff 100%);
 }
 
-#home #intro #content #welcome{
-    font-size: 30px;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-
-#home #intro #content #name{
-    font-size: 50px;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-
-#home #intro #content #job-role span{
-    padding: 5px;
-    background: #FFB200;
-}
-
-#home #intro #content #hire-me{
-    width: 50%;
-    width: fit-content;
-    font-size: 20px;
-    padding: 10px;
-    border: 0px solid white;
-    border-radius: 20px;
-    background: linear-gradient(to top right, navy, rgb(255, 255, 255));
-    box-shadow: 0px 0px 10px 7px white;
-}
-
-#home #intro #content #hire-me:hover{
-    background: white;
-
-    box-shadow: 0px 0px 10px 7px navy;
-    cursor: pointer;
-}
-
-#home #intro #content #hire-me a{
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-#home #intro #content #hire-me:hover a{
-    text-decoration: none;
-    color: navy;
-}
-
-#home #intro #buttons
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#home #intro #buttons #contact-logos{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#home #intro #buttons #contact-logos img{
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
-}
-
-#home #intro #buttons #contact-logos img:hover{
-    cursor: pointer;
-}
-
-#home #photo{
-    width: 50%;
-}
-
-#home img{
-    width: 100%;
-    height: 100%;
-}
-/* *****************************************************************Navbar Ends****************************************** */
-
-
-/* *****************************************************************Other Sections Starts****************************************** */
-.other-sections{
-    scroll-snap-align: center;
-    display: flex;
-    height: 100vh;
-    margin-bottom: 0;
-}
-
-.other-sections #sidebar{
+.home__container {
+    width: 65%;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    gap: 1.2rem;
 }
 
-.other-sections #sidebar img{
-    width: 100%;
-    height: 100%;
-}
-
-.other-sections #sidebar #sidebar-menu{
-    background-color: #FFB200;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 20px;
+.home__greeting {
+    font-size: 2rem;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
-.other-sections #content{
-    width: 80%;
-    height: 100%;
-    /* padding: 10px; */
-    overflow-y: auto;
-    background-color: #e2e2e2;
-    scroll-snap-type: y mandatory;
+.home__name {
+    font-size: 2.3rem;
 }
 
-.title{
-    margin-top: 10px;
-    font-size: 70px;
-    font-weight: bold ;
-    text-transform: uppercase;
-    text-align: center;
-    border: 1px solid black;
-    width: 80%;
-    height: 10vh;
+.home__name--highlight {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Handlee', cursive;
+    font-weight: 800;
 }
 
-/* ****************************************************About Starts**************************************************************** */
-#about-me{
-    scroll-snap-align: center;
-    height: 100vh;
+.home__role {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.home__description p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.home__buttons {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-#about-me-info{
+.home__hire-me {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    background: #3D74B6;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 0 5px 4px #bcd8fbae  inset, 0 0 10px 4px white;
+    outline-offset: 4px;
+    transition: 0.4s;
+}
+
+.home__hire-me:hover {
+    background: white;
+    color: navy;
+    box-shadow: 0 0 10px navy;
+    cursor: pointer;
+}
+
+.home__socials {
+    display: flex;
+    gap: 15px;
+}
+
+.home__social-link img {
+    height: 35px;
+    width: 35px;
+}
+
+.home__social-link img:hover {
+    filter: invert(1);
+    transform: translateY(-5px);
+}
+
+.home__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__photo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* *********************************************************************************************************** */
+/* *****************************************************Home Ends********************************************* */
+/* *********************************************************************************************************** */
+
+/* *********************************************************************************************************** */
+/* *****************************************************Profile Starts**************************************** */
+/* *********************************************************************************************************** */
+
+.section{
+    scroll-snap-align: center;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section__title{
+    width: 100%;
+    height: 20dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+
+.section__title h1{
+    width: 50%;
+    height: 50%;
+    text-transform: uppercase;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid black;
+}
+
+.section__main{
+    width: 100%;
+    height: 80dvh;
+    background-color: cyan;
+}
+
+
+
+#about-me-info {
     padding: 20px;
     height: 90vh;
     display: flex;
@@ -209,19 +207,19 @@ html{
     justify-content: space-between;
 }
 
-#about-me-info #stats-box{
+#about-me-info #stats-box {
     display: flex;
     flex-wrap: wrap;
 }
 
-#about-me-info #stats{
+#about-me-info #stats {
     display: flex;
     flex-wrap: wrap;
     height: 50vh;
     width: 50%;
 }
 
-#about-me-info .box{
+#about-me-info .box {
     height: 50%;
     width: 50%;
     background-color: black;
@@ -232,29 +230,32 @@ html{
     box-sizing: border-box;
 }
 
-#about-me-info .box h3{
+#about-me-info .box h3 {
     color: #FFB200;
     font-size: 40px;
 }
 
-#about-me-info .box p{
+#about-me-info .box p {
     color: white;
 }
 
-#box-1{
+#box-1 {
     border-right: 2px solid #FFB200;
 }
-#box-2{
+
+#box-2 {
     border-bottom: 2px solid #FFB200;
 }
-#box-3{
+
+#box-3 {
     border-top: 2px solid #FFB200;
 }
-#box-4{
+
+#box-4 {
     border-left: 2px solid #FFB200;
 }
 
-#outer-box{
+#outer-box {
     width: 50%;
     padding: 10px;
     box-sizing: border-box;
@@ -264,15 +265,13 @@ html{
     align-items: start;
 }
 
-#outer-box h2
-{
+#outer-box h2 {
     margin-top: 0;
     padding-left: 40px;
     height: 10%;
 }
 
-#inner-box
-{
+#inner-box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -280,25 +279,25 @@ html{
     height: 90%;
 }
 
-.row-box{
+.row-box {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.row-box .row-box-pic{
+.row-box .row-box-pic {
     width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.row-box .row-box-pic img{
+.row-box .row-box-pic img {
     width: 80px;
     height: auto;
 }
 
-.row-box .row-box-content{
+.row-box .row-box-content {
     width: 70%;
 }
 
@@ -307,26 +306,28 @@ html{
 
 /* ****************************************************Education Starts**************************************************************** */
 
-#education{
+#education {
     scroll-snap-align: center;
 
     height: 100vh;
 
 }
+
 /* ****************************************************Education Ends**************************************************************** */
 
 /* ****************************************************Skills Starts**************************************************************** */
 
-#skills{
+#skills {
     scroll-snap-align: center;
 
     height: 100vh;
 }
+
 /* ****************************************************Skills Ends**************************************************************** */
 
 /* ****************************************************Projects Starts**************************************************************** */
 
-#projects{
+#projects {
     scroll-snap-align: center;
 
     height: 100vh;
@@ -336,7 +337,7 @@ html{
 
 /* ****************************************************Contact Starts**************************************************************** */
 
-#contact{
+#contact {
     scroll-snap-align: center;
 
     height: 100vh;
