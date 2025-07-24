@@ -11,25 +11,30 @@
 </head>
 
 <body>
-    <!-- Sidebar Starts -->
-    <div class="sidebar">
-        <div class="sidebar__icon"><i class="fa fa-home fa-2x"></i></div>
-        <div class="sidebar__icon"><i class="fa fa-user fa-2x"></i></div>
-        <div class="sidebar__icon"><i class="fa fa-mortar-board fa-2x"></i></div>
-        <div class="sidebar__icon"><i class="fa fa-wrench fa-2x"></i></div>
-        <div class="sidebar__icon"><i class="fa fa-suitcase fa-2x"></i></div>
-        <div class="sidebar__icon"><i class="fa fa-paper-plane fa-2x"></i></div>
-    </div>
-    <!-- Sidebar Ends -->
+    <!-- Navbar Starts -->
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="#" class="logo--highlight">Anuprash Gautam</a>
+        </div>
+
+        <ul class="navbar__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hire-me">Hire Me</a></li>
+        </ul>
+    </nav>
+    <!-- Navbar Ends -->
 
     <!-- Home Start -->
-    <div class="home">
+    <div class="home" id="#home">
         <div class="home__left">
             <div class="home__container">
                 <div class="home__greeting">Hi there!</div>
 
                 <div class="home__name">
-                    I 'm <span class="home__name--highlight">Anuprash Gautam</span>.
+                    I 'm <span class="home__name logo--highlight">Anuprash Gautam</span>.
                 </div>
 
                 <div class="home__role">
@@ -68,54 +73,50 @@
     <!-- Home End -->
 
     <!-- About Starts -->
-    <div class="about section">
+    <div class="about section" id="about">
         <div class="about__title section__title">
             <h1>About Me</h1>
         </div>
 
         <div class="about__main section__main">
             <div class="about__top">
-                <div class="about__top__title">
-                    <h2>I am <span class="home__name--highlight">Anuprash Gautam</span>, full stack Java developer.</h2>
+                <div class="about__top__left">
+                    <img src="./assets/anuprash1.jpg" alt="">
                 </div>
 
-                <div class="about__top__content">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit quos voluptatum
-                        sapiente
-                        tempore voluptas, assumenda sint nam! Sed facere, officiis inventore earum dolorum perferendis
-                        id
-                    </p>
+                <div class="about__top__right">
+
+                    <div class="about__content">
+                        <h2>Namaste!</h2>
+
+                        <h3>I am <span class="logo--highlight">Anuprash Gautam</span>, full stack Java
+                            developer.</h3>
+
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nulla fugit quos Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Atque beatae magnam reiciendis libero deleniti,
+                            quae non quam mollitia, soluta omnis ullam qui culpa cumque voluptatum quasi! Nobis ducimus
+                            quam sapiente minus labore numquam qui quaerat aspernatur illum similique officiis, autem
+                            ullam, suscipit cum facere, quos deserunt rem repudiandae cumque iusto!
+                        </p>
+
+                        <div class="about__buttons home__socilas">
+                            <a href="https://www.linkedin.com/in/anuprashgautam/" target="_blank"
+                                class="home__social-link">
+                                <img src="assets/icons/linkedin-logo.svg" alt="LinkedIn" />
+                            </a>
+                            <a href="https://github.com/AnuprashGautam" target="_blank" class="home__social-link">
+                                <img src="assets/icons/github-logo.svg" alt="Github" />
+                            </a>
+                            <a href="mailto:anuprashgautam@hotmail.com" class="home__social-link">
+                                <img src="assets/icons/mail-logo.svg" alt="Mail" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="about__down">
                 <div class="about__down__left">
-                    <div class="about__stats">
-                        <div class="about__stats__left">
-                            <div class="about__stats-box" id="box-1">
-                                <h3>1.2k+</h3>
-                                GitHub Commits
-                            </div>
-                            <div class="about__stats-box" id="box-2">
-                                <h3>4+</h3>
-                                Projects
-                            </div>
-                        </div>
-
-                        <div class="about__stats__right">
-                            <div class="about__stats-box" id="box-3">
-                                <h3>7+</h3>
-                                Certificates
-                            </div>
-                            <div class="about__stats-box" id="box-4">
-                                <h3>45+</h3>
-                                Repositories
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about__down__right">
                     <div class="about__what-i-do__title">
                         <h2>What I do ?</h2>
                     </div>
@@ -153,6 +154,34 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="about__down__right">
+                    <div class="about__stats">
+                        <div class="about__stats__left">
+                            <div class="about__stats-box" id="box-1">
+                                <h3><span class="counter" data-target="1000">0</span>+</h3>
+                                GitHub Commits
+                            </div>
+                            <div class="about__stats-box" id="box-2">
+                                <h3><span class="counter" data-target="5">0</span>+</h3>
+                                Projects
+                            </div>
+                        </div>
+
+                        <div class="about__stats__right">
+                            <div class="about__stats-box" id="box-3">
+                                <h3><span class="counter" data-target="7">0</span>+</h3>
+                                Certificates
+                            </div>
+                            <div class="about__stats-box" id="box-4">
+                                <h3><span class="counter" data-target="45">0</span>+</h3>
+                                Repositories
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
             <!-- About Ends -->
 
@@ -194,7 +223,7 @@
 
     <!-- Education Ends -->
     <!-- Skills Starts -->
-     <h1>Skills starts here...</h1>
+    <h1>Skills starts here...</h1>
     <!-- Skills Ends -->
 
 
@@ -202,7 +231,7 @@
     <div class="footer">
         <div class="footer__container">
             <div class="footer__top">
-                <div class="footer__name home__name--highlight">Anuprash Gautam</div>
+                <div class="footer__name logo--highlight">Anuprash Gautam</div>
                 <div class="footer__role home__role">Full Stack Java Developer</div>
                 <div class="footer__buttons home__socials">
                     <a href="https://www.linkedin.com/in/anuprashgautam/" target="_blank" class="home__social-link">
@@ -224,6 +253,8 @@
     </div>
     <!-- Footer Ends -->
 
+    <!-- My script -->
+    <script src="script.js"></script>
 </body>
 
 </html>

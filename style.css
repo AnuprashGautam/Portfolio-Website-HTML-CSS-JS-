@@ -6,10 +6,12 @@
 }
 
 :root {
-    --primary-color: #FFB200;
+    --primary-color: #fcd277;
     --bg-color: #FFFCFB;
     --heading-color: black;
     --p-color: #444;
+    --border-color: black;
+    --outline-color: skyblue;
 }
 
 body {
@@ -28,35 +30,65 @@ p {
     color: var(--p-color);
 }
 
-html {
-    /* scroll-snap-type: y mandatory; */
+.logo--highlight {
+    background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Ubuntu', cursive;
+    font-weight: bolder;
 }
 
 /* *********************************************************************************************************** */
-/* ***************************************************Sidebar Starts******************************************* */
+/* ***************************************************Navbar Starts******************************************* */
 /* *********************************************************************************************************** */
-.sidebar {
+
+.navbar {
     position: fixed;
-    top: 25vh;
-    left: 95%;
+    top: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    width: 3%;
-    height: 50vh;
-    background-color: #FFB200;
-    border-radius: 30px;
-    padding: 0 10px;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 10vh;
+    background-image: linear-gradient(to bottom, var(--primary-color) 0%, transparent 100%);
+    z-index: 1000;
 }
 
-.sidebar__icon:hover {
-    color: white;
-    cursor: pointer;
+.navbar a{
+    text-decoration-line: none;
 }
+
+.navbar__logo{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.navbar__links{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.navbar__links li a{
+    color: black;
+    font-size: x-large;
+    transition: color 0.25s ease;
+}
+
+.navbar__links li a:hover{
+    cursor: pointer;
+    color: white;
+    transform: ease;
+}
+
 
 /* *********************************************************************************************************** */
-/* ***************************************************Sidebar Ends******************************************* */
+/* ***************************************************Navbar Ends******************************************* */
 /* *********************************************************************************************************** */
 
 
@@ -65,6 +97,9 @@ html {
 /* *********************************************************************************************************** */
 .home {
     display: flex;
+    height: 100dvh;
+    position: relative;
+    z-index: 1;
 }
 
 .home__left {
@@ -72,7 +107,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right, #fddb92 0%, #d1fdff 100%);
+    background-image: linear-gradient(to right, #a8edea 0%, white 100%);
 }
 
 .home__container {
@@ -89,14 +124,6 @@ html {
 
 .home__name {
     font-size: 2.3rem;
-}
-
-.home__name--highlight {
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    background-clip: text;
-    color: transparent;
-    font-family: 'Ubuntu', cursive;
-    font-weight: 800;
 }
 
 .home__role {
@@ -150,8 +177,8 @@ html {
 }
 
 .home__social-link img:hover {
-    filter: invert(1);
-    transform: translateY(-5px) ease;
+    filter: invert(0.3);
+    transform: translateY(-5px);
 }
 
 .home__right {
@@ -162,8 +189,13 @@ html {
 }
 
 .home__photo {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    object-fit: cover;
+    object-position: center;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
 
 /* *********************************************************************************************************** */
@@ -175,6 +207,7 @@ html {
 /* *********************************************************************************************************** */
 
 .section{
+    margin-top: 15px;
     scroll-snap-align: center;
     min-height: 100dvh;
     display: flex;
@@ -216,14 +249,49 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    height: 160dvh;
 }
 
 .about__top{
-    padding: 10px 80px;
-    text-align: justify;
-    height: 20%;
-    width: 100%;
-    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.about__top__left, .about__top__right{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__top__right{
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.about__top__left img{
+    width: 60%;
+    height: 100%;
+    flex: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+
+.about__content{
+    margin-top: 0;
+    padding: 20px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .about__down{
@@ -232,9 +300,63 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 50%;
 }
 
 .about__down__left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.about__what-i-do__title{
+    width: 80%;
+    height: 20%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.about__what-i-do__content{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about__work{
+    display: flex;
+    width: 100%;
+    height: 33%;
+}
+
+.about__work-img{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__work-img img{
+    width: 50%;
+    height: 50%;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+}
+
+.about__work-content{
+    width: 70%;
+    display: flex;
+    flex-direction: column ;
+    align-items: start;
+    justify-content: center;
+}
+
+
+.about__down__right{
     width: 50%;
     height: 100%;
     padding: 20px;
@@ -308,59 +430,6 @@ html {
 
 #box-3 {
     border-bottom: 2px solid var(--primary-color);
-}
-
-
-.about__down__right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-.about__what-i-do__title{
-    width: 80%;
-    height: 20%;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-.about__what-i-do__content{
-    width: 80%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.about__work{
-    display: flex;
-    width: 100%;
-    height: 33%;
-}
-
-.about__work-img{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about__work-img img{
-    width: 50%;
-    height: 50%;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
-}
-
-.about__work-content{
-    width: 70%;
-    display: flex;
-    flex-direction: column ;
-    align-items: start;
-    justify-content: center;
 }
 
 /* *********************************************************************************************************** */
@@ -454,9 +523,14 @@ html {
 
 .footer{
     width: 100%;
-    height: 30dvh;
-    background-image: linear-gradient(to bottom, rgba(212, 252, 121, 0) 0%, #96e6a1 100%);
+    height: 20dvh;
+    background-image: linear-gradient(to top, #fddb92 0%, white 100%);
     padding: 5dvh 5dvh 0 5dvh;
+    border-top: 3px solid black;
+    border-radius: 25px 25px 0 0;
+    outline: 2px solid skyblue;
+    outline-offset: 3px;
+    box-shadow: 0 0 10px 5px grey;
 }
 
 .footer__container{
@@ -464,11 +538,13 @@ html {
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .footer__top{
     width: 100%;
-    height: 80%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -480,7 +556,7 @@ html {
 }
 
 .footer__down{
-    height: 20%;
+    height: fit-content;
     width: 100%;
     display: flex;
     align-items: center;
