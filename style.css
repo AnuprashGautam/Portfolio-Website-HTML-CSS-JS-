@@ -368,12 +368,13 @@ p {
 .about__stats{
     height: 80%;
     width: 80%;
-    background: var(--heading-color);
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     padding: 10px;
+    
+    background-color: var(--heading-color);
     color: var(--primary-color);
     border-radius: 25px;
     box-shadow: 0 0 10px 5px grey;
@@ -433,7 +434,7 @@ p {
 }
 
 /* *********************************************************************************************************** */
-/* *****************************************************About Starts**************************************** */
+/* *****************************************************About Ends******************************************** */
 /* *********************************************************************************************************** */
 
 /* *********************************************************************************************************** */
@@ -441,16 +442,20 @@ p {
 /* *********************************************************************************************************** */
 
 .education__main{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding: 20px;
-    background-color: cyan;
+    /* background-color: cyan; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .education__timeline {
   position: relative;
-  max-width: 80%;
+  width: 1000%;
+  height: 100%;
   margin: auto;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 /* vertical center line */
@@ -458,7 +463,7 @@ p {
   content: '';
   position: absolute;
   width: 4px;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(to top, #30cfd0 0%, var(--primary-color) 100%);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -486,8 +491,11 @@ p {
 .education__content {
   background: white;
   padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--heading-color);
+    color: var(--primary-color);
+    border-radius: 25px;
+    box-shadow: 0 0 10px 5px grey;
+    outline: 3px solid var(--primary-color);
 }
 
 .education__timeline-container::after {
@@ -495,7 +503,7 @@ p {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #330867;
+  background: radial-gradient(circle, orange 40%, yellow 60%);
   border: 3px solid white;
   top: 20px;
   right: -10px;
@@ -513,9 +521,112 @@ p {
 
 
 /* *********************************************************************************************************** */
-/* *****************************************************Education Starts**************************************** */
+/* *****************************************************Education Ends**************************************** */
 /* *********************************************************************************************************** */
 
+/* *********************************************************************************************************** */
+/* *****************************************************Skills Starts**************************************** */
+/* *********************************************************************************************************** */
+
+.skills__main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.skills__box{
+    width: 20%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--heading-color);
+    color: var(--primary-color);
+    border-radius: 25px;
+    box-shadow: 0 0 10px 5px grey;
+    outline: 3px solid var(--primary-color);
+}
+
+.skills__box img{
+    width: 8rem;
+    height: 8rem;
+    filter: drop-shadow(2px 2px 10px rgba(57, 218, 250, 0.7));
+}
+
+/* *********************************************************************************************************** */
+/* *****************************************************Skills Ends**************************************** */
+/* *********************************************************************************************************** */
+
+/* *********************************************************************************************************** */
+/* *****************************************************Projects Starts**************************************** */
+/* *********************************************************************************************************** */
+
+.projects__main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    border: 1px solid red;
+}
+
+.projects__box{
+    margin-top: 20px;
+    padding: 20px;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: center;
+    border: 1px solid cyan;
+    color: var(--primary-color);
+    border-radius: 25px;
+    box-shadow: 0 0 10px 5px grey;
+    outline: 3px solid var(--primary-color);
+}
+
+#ai-note-maker{
+    background-image: url(assets/projects/ai-note-maker.jpg);
+    object-fit: contain;
+    object-position:center;
+}
+
+#smart-contact-manager{
+    background-image: url(assets/projects/contact-manager.jpg);
+    object-fit: contain;
+    object-position:center;
+}
+
+/* *********************************************************************************************************** */
+/* *****************************************************Projects Ends**************************************** */
+/* *********************************************************************************************************** */
+
+/* *********************************************************************************************************** */
+/* *****************************************************Contact Starts**************************************** */
+/* *********************************************************************************************************** */
+
+.contact__main{
+    display: flex;
+    border: 1px solid red;
+}
+
+.contact__left{
+    width: 50%;
+    background-color: cyan;
+}
+
+.contact__right{
+    width: 50%;
+    background-color: green;
+}
+
+/* *********************************************************************************************************** */
+/* *****************************************************Contact Ends**************************************** */
+/* *********************************************************************************************************** */
 
 /* *********************************************************************************************************** */
 /* *****************************************************Footer Starts**************************************** */
@@ -524,18 +635,7 @@ p {
 .footer{
     width: 100%;
     height: 20dvh;
-    background-image: linear-gradient(to top, #fddb92 0%, white 100%);
-    padding: 5dvh 5dvh 0 5dvh;
-    border-top: 3px solid black;
-    border-radius: 25px 25px 0 0;
-    outline: 2px solid skyblue;
-    outline-offset: 3px;
-    box-shadow: 0 0 10px 5px grey;
-}
-
-.footer__container{
-    width: 100%;
-    height: 100%;
+    background: linear-gradient(to top, #fddb92 0%, white 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
