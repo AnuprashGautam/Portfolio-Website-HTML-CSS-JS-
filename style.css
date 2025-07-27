@@ -35,7 +35,7 @@ video {
 body {
     width: 100%;
     height: 100dvh;
-    font-family: "Open Sans";
+    font-family: "Open Sans",Arial, sans-serif;
     background-color: var(bg-color);
 }
 
@@ -45,7 +45,7 @@ h1 {
 }
 
 p {
-    font-family: "Ubuntu";
+    font-family: Ubuntu,Arial, sans-serif;
     color: var(--p-color);
     font-size: 1rem;
 }
@@ -54,7 +54,7 @@ p {
     background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     background-clip: text;
     color: transparent;
-    font-family: "Ubuntu", cursive;
+    font-family: Ubuntu, Arial, sans-serif;
     font-weight: bolder;
 }
 
@@ -509,7 +509,6 @@ a {
     width: 100%;
     height: 100%;
     margin: auto;
-    border: 2px solid green;
 }
 
 /* vertical center line */
@@ -579,7 +578,7 @@ a {
 /* *********************************************************************************************************** */
 
 .skills__main {
-    width: 100%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -611,40 +610,77 @@ a {
 /* *********************************************************************************************************** */
 
 .projects__main {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: space-evenly;
-    justify-content: space-evenly;
+    position: relative;
     border: 1px solid red;
+    padding: 20px ;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .projects__box {
-    margin-top: 20px;
-    padding: 20px;
-    width: 40%;
-    height: 40%;
+    position: relative;
+    margin: 20px;
+    width: 70%;
+    height: 30dvh;
+
     display: flex;
-    flex-wrap: wrap;
-    align-items: end;
+    align-items: center;
     justify-content: center;
-    border: 1px solid cyan;
+    
     color: var(--primary-color);
     border-radius: 25px;
     box-shadow: 0 0 10px 5px grey;
     outline: 3px solid var(--primary-color);
 }
 
-#ai-note-maker {
-    background-image: url(assets/projects/ai-note-maker.jpg);
-    object-fit: contain;
+.project__image{
+    width: 40%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.left-project{
+    left: 0;
+    border-radius: 0 10rem 10rem 0;
+    flex-direction: row-reverse;
+}
+
+.right-project{
+    left: calc(30% - 40px);
+    border-radius: 10rem 0 0 10rem;
+}
+
+.project__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
     object-position: center;
 }
 
-#smart-contact-manager {
-    background-image: url(assets/projects/contact-manager.jpg);
-    object-fit: contain;
-    object-position: center;
+
+.project__description{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
+
+.project__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.project__buttons a img{
+    background: none;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
 
 /* *********************************************************************************************************** */
 /* *****************************************************Projects Ends**************************************** */
@@ -679,7 +715,6 @@ a {
 
 .footer {
     width: 100%;
-    height: 20dvh;
     background: linear-gradient(to top, #fddb92 0%, white 100%);
     display: flex;
     flex-direction: column;
@@ -720,7 +755,7 @@ a {
 .footer__down img {
     width: 25px;
     height: 25px;
-    margin: 2px;
+    /* margin: 2px; */
 }
 
 /* *********************************************************************************************************** */
@@ -806,6 +841,10 @@ a {
         display: block;
     }
 
+    .section{
+        padding: 0;
+    }
+
     .about__top,
     .about__down {
         flex-direction: column;
@@ -834,5 +873,9 @@ a {
     .skills__box img {
         width: 8rem;
         height: 8rem;
+    }
+
+    .projects__box{
+        height: 15dvh;
     }
 }
