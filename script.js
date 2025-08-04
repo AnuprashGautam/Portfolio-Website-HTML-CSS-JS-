@@ -19,3 +19,19 @@ counters.forEach(counter => {
 
     updateCounter();
 });
+
+
+// Adding the sidebar for small size screen
+function openSidebar() {
+    document.getElementById("sidebar").classList.add("active");
+}
+
+function closeSidebar() {
+    document.getElementById("sidebar").classList.remove("active");
+}
+
+document.querySelectorAll("#sidebar a").forEach(link => {
+    link.addEventListener("click", () => {
+        closeSidebar();
+    });
+});
